@@ -21,9 +21,12 @@
                   <div id="text-4100445215" class="text">
                      <p>{{$setting->company}}</p>
                      <ul>
-                     <li>Địa chỉ: {{$setting->address1}}</li>
+                     <li>VPGD: {{$setting->address1}}</li>
                      @if ($setting->address2)
-                     <li>Địa chỉ 2: {{$setting->address2}}</li>
+                     <li>Địa chỉ: {{$setting->address2}}</li>
+                     @endif
+                     @if ($setting->address3)
+                     <li>Nhà máy: {{$setting->address3}}</li>
                      @endif
                      <li>Hotline: <a href="tel:{{$setting->phone1}}">{{$setting->phone1}}</a></li>
                      @if ($setting->phone2)
@@ -38,6 +41,12 @@
                      <style>
                      #text-4100445215 {
                      color: rgb(255, 255, 255);
+                     }
+                     #text-4100445215 a{
+                     color: rgb(255, 255, 255);
+                     }
+                     #text-4100445215 a:hover {
+                     color: #334862;
                      }
                      #text-4100445215 > * {
                      color: rgb(255, 255, 255);
