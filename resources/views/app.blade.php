@@ -21,7 +21,7 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script>
-      window.__ENV__ = window.__ENV || {}; __ENV__.link ='httpsgit ://sanxuatgangduc.com.vn/';
+      window.__ENV__ = window.__ENV || {}; __ENV__.link ='https://sanxuatgangduc.com.vn/';
       window.Laravel = {!! 
           json_encode([
               'csrf_token' => csrf_token(),
