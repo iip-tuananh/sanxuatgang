@@ -31,6 +31,7 @@
       <meta name="twitter:title" content="@yield('title')" />
       <meta name="twitter:description" content="@yield('description')" />
       <meta name="twitter:image" content="@yield('image')" />
+      <meta name="google-site-verification" content="47z1N3hmV2F8Y1CF2FFy0QDQj3qDQ9yfbmEfMVz4QU8" />
       <!-- Fav Icon -->
       <link rel="icon" href="{{url(''.$setting->favicon)}}" type="image/x-icon">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto%3Aregular%2C700%2Cregular%2C700%2Cregular&#038;subset=vietnamese%2Cgreek-ext&#038;display=swap" />
