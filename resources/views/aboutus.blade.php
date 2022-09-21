@@ -18,8 +18,8 @@ Giới thiệu
             </div>
          </div>
          <div id="col-439034941" class="large-3 col col-first col-divided"  >
-               @include('layouts.main.rightnav-page')
-            </div>
+            @include('layouts.main.rightnav-page')
+         </div>
       </div>
    </div>
 </main>

@@ -36,7 +36,8 @@
                      <li>Tel: <a href="tel:{{$setting->phone3}}">{{$setting->phone3}}</a></li>
                      @endif
                      <li>E-mail: {{$setting->email}}</li>
-                     <li>Website: www.pkcvietnam.com.vn</li>
+                     <li>Website: <a href="https://sanxuatgangduc.com.vn/" target="_blank" rel="noopener noreferrer">www.sanxuatgangduc.com.vn</a> </li>
+                     <li>Website: <a href="https://sanxuatgangduc.com/" target="_blank" rel="noopener noreferrer">www.sanxuatgangduc.com</a> </li>
                      </ul>
                      <style>
                      #text-4100445215 {
@@ -46,7 +47,7 @@
                      color: rgb(255, 255, 255);
                      }
                      #text-4100445215 a:hover {
-                     color: #334862;
+                     color: #880000;
                      }
                      #text-4100445215 > * {
                      color: rgb(255, 255, 255);
@@ -55,7 +56,51 @@
                   </div>
                </div>
          </div>
-         <div id="col-651322132" class="col medium-6 small-12 large-4"  >
+         <div id="col-183956952" class="col medium-6 small-12 large-2"  >
+               <div class="col-inner text-left"  >
+                  <div id="text-775089456" class="text">
+                     <p><span style="font-size: 120%;"><strong>VỀ CHÚNG TÔI</strong></span></p>
+                     <style>
+                     #text-775089456 {
+                     color: rgb(255, 255, 255);
+                     }
+                     #text-775089456 > * {
+                     color: rgb(255, 255, 255);
+                     }
+                     </style>
+                  </div>
+                  <div class="is-divider divider clearfix" style="max-width:121px;height:1px;background-color:rgb(245, 245, 245);"></div>
+                  <div id="text-4100445215" class="text">
+                     <ul>
+                     <li><a href="{{route('chinhsach')}}">Chính sách và bảo mật thông tin</a></li>
+                     <li><a href="{{route('aboutUs')}}">Giới thiệu</a></li>
+                     <li><a href="{{route('allProduct')}}">Sản phẩm</a></li>
+                     @foreach ($blogCate as $cate)
+                     <li><a href="{{route('listCateBlog', ['slug'=>$cate->slug])}}">{{languageName($cate->name)}}</a></li>
+                     @endforeach
+                     <li><a href="{{route('lienHe')}}">Liên hệ</a></li>
+                     </ul>
+                     <div class="fb-page" 
+                     data-href="{{$setting->facebook}}"
+                     data-width="480" 
+                     data-hide-cover="false"
+                     data-show-facepile="false"></div>
+                     <style>
+                     #text-4100445215 {
+                     color: rgb(255, 255, 255);
+                     }
+                     #text-4100445215 a{
+                     color: rgb(255, 255, 255);
+                     }
+                     
+                     #text-4100445215 > * {
+                     color: rgb(255, 255, 255);
+                     }
+                     </style>
+                  </div>
+               </div>
+         </div>
+         <div id="col-651322132" class="col medium-6 small-12 large-3"  >
                <div class="col-inner text-left"  >
                   <div id="text-920663937" class="text">
                      <p><span style="font-size: 120%;"><strong>GỬI THÔNG TIN LIÊN HỆ</strong></span></p>
@@ -89,13 +134,13 @@
                                  <textarea name="mess" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Nội dung liên hệ"></textarea>
                               </span>
                         </p>
-                        <p><input type="submit" value="Gửi đi" class="wpcf7-form-control has-spinner wpcf7-submit" /></p>
+                        <p><input type="submit" value="Gửi đi" class="wpcf7-form-control has-spinner wpcf7-submit" style="background-color: #880000;"/></p>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                      </form>
                   </div>
                </div>
          </div>
-         <div id="col-367823494" class="col medium-12 small-12 large-4"  >
+         <div id="col-367823494" class="col medium-12 small-12 large-3"  >
                <div class="col-inner text-left"  >
                   <div id="text-2985962708" class="text">
                      <p><span style="font-size: 120%;"><strong>GOOGLE MAPS</strong></span></p>
@@ -112,6 +157,9 @@
                   <p>
                      {!!$setting->iframe_map!!}
                   </p>
+                  <a href="http://online.gov.vn/Home/WebDetails/83423" target="_blank">
+                     <img src="{{url('frontend/images/logoSaleNoti-4.png')}}" alt="" loading="lazy">
+                  </a>
                </div>
          </div>
          <style>
@@ -127,7 +175,8 @@
          padding-bottom: 0px;
          }
          #section_1508992358 .section-bg.bg-loaded {
-         background-image: url({{url('frontend/images/footer.png')}});
+         background: #0c3d77;
+         /* background-image: url({{url('frontend/images/footer.png')}}); */
          }
          #section_1508992358 .ux-shape-divider--top svg {
          height: 150px;

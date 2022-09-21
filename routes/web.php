@@ -39,6 +39,8 @@ Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function
     Route::get('chinh-sach-phan-phoi/{slug}.html','PageController@serviceDetail')->name('serviceDetail');
     Route::get('FAQ.html','PageController@listService')->name('listService');
     Route::get('about-us.html','PageController@aboutUs')->name('aboutUs');  
+    Route::get('chinh-sach-va-bao-mat.html','PageController@listChinhSach')->name('chinhsach');  
+    Route::get('chi-tiet/{slug}.html','PageController@detailChinhSach')->name('detailchinhsach');  
     Route::get('cong-nghe.html','PageController@technology')->name('technology');   
     Route::get('lien-he.html','PageController@contact')->name('lienHe');
     Route::post('lien-he','PageController@postcontact')->name('postcontact');

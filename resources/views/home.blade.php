@@ -96,7 +96,7 @@
                         </div>
                   </div>
                   <div class="icon-box-text last-reset">
-                        <p><span style="font-size: 85%; font-weight: bold; color: #ed1c24;">THƯƠNG HIỆU UY TÍN</span></p>
+                        <p><span style="font-size: 85%; font-weight: bold; color: #880000;">THƯƠNG HIỆU UY TÍN</span></p>
                   </div>
                   </div>
                   </div>
@@ -120,7 +120,7 @@
                         </div>
                   </div>
                   <div class="icon-box-text last-reset">
-                        <p><span style="font-size: 85%; font-weight: bold; color: #ed1c24;">SẢN PHẨM  CHẤT LƯỢNG</span></p>
+                        <p><span style="font-size: 85%; font-weight: bold; color: #880000;">SẢN PHẨM  CHẤT LƯỢNG</span></p>
                   </div>
                   </div>
                   </div>
@@ -144,7 +144,7 @@
                         </div>
                   </div>
                   <div class="icon-box-text last-reset">
-                        <p><span style="font-size: 85%; font-weight: bold; color: #ed1c24;">TƯ VẤN , HỖ TRỢ NHIỆT TÌNH</span></p>
+                        <p><span style="font-size: 85%; font-weight: bold; color: #880000;">TƯ VẤN , HỖ TRỢ NHIỆT TÌNH</span></p>
                   </div>
                   </div>
                   </div>
@@ -168,7 +168,7 @@
                         </div>
                   </div>
                   <div class="icon-box-text last-reset">
-                        <p><span style="font-size: 85%; font-weight: bold; color: #ed1c24;">GIAO HÀNG TOÀN QUỐc</span></p>
+                        <p><span style="font-size: 85%; font-weight: bold; color: #880000;">GIAO HÀNG TOÀN QUỐc</span></p>
                   </div>
                   </div>
                   </div>

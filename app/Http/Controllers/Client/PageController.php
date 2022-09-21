@@ -56,6 +56,16 @@ class PageController extends Controller
         ])->orderBy('id','DESC')->limit(6)->get(['id','name','slug','description','image']);
         return view('aboutus',$data);
     }
+    public function listChinhSach()
+    {
+        $data['pageContent'] = PageContent::where(['type'=>'ho-tro-khach-hang', 'language'=>'vi', 'status'=>1])->get(['id','title','content', 'image', 'description', 'slug']);
+        return view('list-chinhsach', $data);
+    }
+    public function detailChinhSach($slug)
+    {
+        $data['pageContent'] = PageContent::where(['type'=>'ho-tro-khach-hang', 'language'=>'vi', 'status'=>1, 'slug'=>$slug])->first(['id','title','content', 'image', 'description', 'slug']);
+        return view('detail-chinhsach', $data);
+    }
     public function contact()
     {
         return view('contactus');
