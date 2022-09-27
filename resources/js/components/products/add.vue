@@ -174,6 +174,13 @@
                   >Thêm khuyến mãi</el-button
                 >
               </div>
+              <div class="form-group">
+                <label>Hiện thị nổi bật trên trang chủ</label>
+                <vs-select v-model="objData.discountStatus">
+                  <vs-select-item value="1" text="Có" />
+                  <vs-select-item value="0" text="Không" />
+                </vs-select>
+              </div>
             </div>
           </div> 
         </div>
