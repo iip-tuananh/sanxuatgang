@@ -604,7 +604,7 @@
                   @endif
                   <p style="color: #0c3d77"><strong>FACEBOOK: </strong></p><p><a href="{{$setting->facebook}}" style="color: #880000">CTy TMSX T&T Hà Nội</a></p>
                   <!-- code ads -->
-                  <script>      
+                  {{-- <script>      
                      //<![CDATA[
                      pf204652bottomLayer = document.getElementById('fl813691');    
                      var pf204652IntervalId = 0;    
@@ -615,7 +615,7 @@
                      function pf204652show(){pf204652curHeight+=2,pf204652curHeight>pf204652maxHeight&&clearInterval(pf204652IntervalId),pf204652bottomLayer.style.height=pf204652curHeight+"px"}function pf204652hide(){pf204652curHeight-=3,pf204652curHeight<pf204652minHeight&&clearInterval(pf204652IntervalId),pf204652bottomLayer.style.height=pf204652curHeight+"px"}function pf204652clickhide(){document.getElementById("pf204652hide").style.display="none",document.getElementById("pf204652show").style.display="inline",pf204652IntervalId=setInterval("pf204652hide()",5)}function pf204652clickshow(){document.getElementById("pf204652hide").style.display="inline",document.getElementById("pf204652show").style.display="none",pf204652IntervalId=setInterval("pf204652show()",5)}function pf204652clickclose(){document.body.style.marginBottom="0px",pf204652bottomLayer.style.display="none"}pf204652IntervalId=setInterval("pf204652show()",5);
                      //]]>  
                      
-                  </script>
+                  </script> --}}
                </div>
             </div>
          </div>
