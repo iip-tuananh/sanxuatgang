@@ -206,6 +206,9 @@
       background-color: #0c3d77;
       padding: 20px 10px;
       }
+      #block_widget-3 img{
+         height: auto;
+      }
       /*megamenu*/
       .nav-dropdown .menu-item-has-children>a, .nav-dropdown .title>a, .nav-dropdown .nav-dropdown-col>a {
       text-transform: uppercase;
