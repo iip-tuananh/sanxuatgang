@@ -94,7 +94,7 @@
       }
       </style>
       <script src='{{asset('frontend/js/jquery.min.js')}}' id='jquery-core-js'></script>
-      <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='{{asset('frontend/js/jquery-migrate.min.js')}}' id='jquery-migrate-js'></script>
+      <script type="javascript/blocked" src='{{asset('frontend/js/jquery-migrate.min.js')}}' id='jquery-migrate-js'></script>
       <script>
          $(document).ready(function () {
             var modal = $('.modal');
@@ -147,20 +147,39 @@
             });
       </script>
       <style>
-         .modal {
-         display: none;
-         position: fixed;
-         z-index: 99;
-         padding-top: 100px;
-         padding-left: 180px;
-         padding-right: 180px;
-         left: 0;
-         top: 0;
-         width: 100%;
-         height: 100%;
-         overflow: auto;
-         background-color: rgb(0, 0, 0);
-         background-color: rgba(0, 0, 0, .4);
+         @media only screen and (max-width: 768px) {
+            .modal {
+               display: none;
+               position: fixed;
+               z-index: 99;
+               padding-top: 100px;
+               padding-left: 0px;
+               padding-right: 0px;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               overflow: auto;
+               background-color: rgb(0, 0, 0);
+               background-color: rgba(0, 0, 0, .4);
+               }
+         }
+         @media only screen and (min-width: 768px) {
+            .modal {
+               display: none;
+               position: fixed;
+               z-index: 99;
+               padding-top: 100px;
+               padding-left: 180px;
+               padding-right: 180px;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               overflow: auto;
+               background-color: rgb(0, 0, 0);
+               background-color: rgba(0, 0, 0, .4);
+               }
          }
 
          .modal-content {
@@ -455,118 +474,6 @@
       </style>
    </head>
    <body data-rsssl=1 class="home page-template page-template-page-blank page-template-page-blank-php page page-id-2 theme-flatsome woocommerce-no-js full-width lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-dark-grayscale">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0 0.49803921568627" />
-                  <feFuncG type="table" tableValues="0 0.49803921568627" />
-                  <feFuncB type="table" tableValues="0 0.49803921568627" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-grayscale">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0 1" />
-                  <feFuncG type="table" tableValues="0 1" />
-                  <feFuncB type="table" tableValues="0 1" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-purple-yellow">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
-                  <feFuncG type="table" tableValues="0 1" />
-                  <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-blue-red">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0 1" />
-                  <feFuncG type="table" tableValues="0 0.27843137254902" />
-                  <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-midnight">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0 0" />
-                  <feFuncG type="table" tableValues="0 0.64705882352941" />
-                  <feFuncB type="table" tableValues="0 1" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-magenta-yellow">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0.78039215686275 1" />
-                  <feFuncG type="table" tableValues="0 0.94901960784314" />
-                  <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-purple-green">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
-                  <feFuncG type="table" tableValues="0 1" />
-                  <feFuncB type="table" tableValues="0.44705882352941 0.4" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" >
-      <defs>
-            <filter id="wp-duotone-blue-orange">
-               <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
-               <feComponentTransfer color-interpolation-filters="sRGB" >
-                  <feFuncR type="table" tableValues="0.098039215686275 1" />
-                  <feFuncG type="table" tableValues="0 0.66274509803922" />
-                  <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
-                  <feFuncA type="table" tableValues="1 1" />
-               </feComponentTransfer>
-               <feComposite in2="SourceGraphic" operator="in" />
-            </filter>
-      </defs>
-      </svg>
       <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
       <div id="wrapper">
       @include('layouts.header.index')
@@ -748,8 +655,8 @@
       var quadmenu = {"ajaxurl":"","gutter":"30"};
       /* ]]> */
       </script>
-      <script  data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='{{asset('frontend/js/quadmenu.min.js')}}' id='quadmenu-js'></script>
-      <script  data-wpmeteor-after="REORDER" type="javascript/blocked" id='flatsome-js-js-extra'>
+      <script data-wpmeteor-after="REORDER" type="javascript/blocked" data-src='{{asset('frontend/js/quadmenu.min.js')}}' id='quadmenu-js'></script>
+      <script data-wpmeteor-after="REORDER" type="javascript/blocked" id='flatsome-js-js-extra'>
       /* <![CDATA[ */
       var flatsomeVars = {"theme":{"version":"3.15.5"},"ajaxurl":"","rtl":"","sticky_height":"70","assets_url":"","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu","toggleButton":"Toggle"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":""};
       /* ]]> */
