@@ -73,7 +73,7 @@
                                              <div class="box-text text-center" >
                                                 <div class="box-text-inner">
                                                 <div id="text-3147455142" class="text">
-                                                      <a href="tel:{{$setting->phone2}}"><span style="font-size: 110%; font-weight: bold; color: #005099;"> {{$setting->phone2}}</span></a>
+                                                      <a href="tel:{{$setting->zalo_number}}"><span style="font-size: 110%; font-weight: bold; color: #005099;"> {{$setting->zalo_number}}</span></a>
                                                       <p><span style="font-size: 90%;">Tư vấn miễn phí 24/7</span></p>
                                                       <style>
                                                          #text-3147455142 {

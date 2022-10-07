@@ -496,7 +496,7 @@
          <div class="modal-content">
          </div>
       </div>
-      <div id="fl813691" style="height: 222px;">
+      <div id="fl813691">
          <div id="eb951855">
             <div id="cob263512">
                <div id="coh963846">
@@ -513,20 +513,29 @@
                <div id="co453569">
                   <!-- code ads -->
                   {{-- <img src="{{url('frontend/images/popupTT-2.jpg')}}" loading="lazy"> --}}
-                  <p style="color: #0c3d77"><strong>HOTLINE: </strong><a href="tel:{{$setting->phone1}}" style="color: #880000">{{$setting->phone1}}</a></p>
-                  @if ($setting->phone2)
-                     <p style="color: #0c3d77"><strong>TEL 1: </strong><a href="tel:{{$setting->phone2}}" style="color: #880000">{{$setting->phone2}}</a></p>
-                  @endif
-                  @if ($setting->phone3)
-                     <p style="color: #0c3d77"><strong>TEL 2: </strong><a href="tel:{{$setting->phone3}}" style="color: #880000">{{$setting->phone3}}</a></p>
-                  @endif
-                  <p style="color: #0c3d77"><strong>FACEBOOK: </strong></p><p><a href="{{$setting->facebook}}" style="color: #880000">CTy TMSX T&T Hà Nội</a></p>
+                  <div style="margin-bottom: 20px;">
+                     <p style="color: #0c3d77"><strong>HOTLINE MIỀN BẮC </strong></p>
+                     @foreach (json_decode($setting->phone2) as $item)
+                     <p class="number-tag-qc" style="margin:0"><strong>{{$item->name}} : </strong>{{$item->number}}</p>
+                     @endforeach
+                  </div>
+                  <div>
+                     <p style="color: #0c3d77"><strong>HOTLINE MIỀN NAM </strong></p>
+                     @foreach (json_decode($setting->phone3) as $item)
+                     <p class="number-tag-qc" style="margin:0"><strong>{{$item->name}} : </strong>{{$item->number}}</p>
+                     @endforeach
+                  </div>
                   <!-- code ads -->
                   <script>      
                      //<![CDATA[
-                     pf204652bottomLayer = document.getElementById('fl813691');    
-                     var pf204652IntervalId = 0;    
-                     var pf204652maxHeight = 220;//Chieu cao khung quang cao     
+                     pf204652bottomLayer = document.getElementById('fl813691'); 
+                     numberTagP = document.getElementsByClassName("number-tag-qc").length;
+                     var pf204652IntervalId = 0;   
+                     if (numberTagP > 4) {
+                        var pf204652maxHeight = 280;//Chieu cao khung quang cao   
+                     } else {
+                        var pf204652maxHeight = 240;//Chieu cao khung quang cao   
+                     } 
                      
                      var pf204652minHeight = 20;    
                      var pf204652curHeight = 0;    
@@ -551,7 +560,7 @@
                <div class="phone-vr">
                   <div class="phone-vr-circle-fill"></div>
                   <div class="phone-vr-img-circle">
-                  <a target="_blank" href="https://zalo.me/{{$setting->phone1}}">				
+                  <a target="_blank" href="https://zalo.me/{{$setting->zalo_number}}">				
                   <img src="{{url('frontend/images/zalo.png')}}" loading="lazy" />
                   </a>
                   </div>
@@ -634,11 +643,11 @@
       #co453569 {
          display: block;
          width: 100%;
-         height: 222px;
+         height: 280px;
          position: absolute;
          z-index: 9999;
          background-color: #f5f6f7;
-         padding: 20px 10px;
+         padding: 10px 10px;
          text-align: center;
       }
       #co453569 p{

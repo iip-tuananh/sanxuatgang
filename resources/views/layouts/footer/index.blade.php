@@ -28,13 +28,15 @@
                      @if ($setting->address3)
                      <li>Nhà máy: {{$setting->address3}}</li>
                      @endif
-                     <li>Hotline: <a href="tel:{{$setting->phone1}}">{{$setting->phone1}}</a></li>
-                     @if ($setting->phone2)
-                     <li>Tel: <a href="tel:{{$setting->phone2}}">{{$setting->phone2}}</a></li>
-                     @endif
-                     @if ($setting->phone3)
-                     <li>Tel: <a href="tel:{{$setting->phone3}}">{{$setting->phone3}}</a></li>
-                     @endif
+                     <li>Hotline VPGD: <a href="tel:{{$setting->phone1}}">{{$setting->phone1}}</a></li>
+                     <li style="margin-bottom: 0;">Hotline Miền Bắc:</li>
+                     @foreach (json_decode($setting->phone2) as $item)
+                     <span style="padding-left: 40px;">{{$item->name}}: <a href="tel:{{$item->number}}">{{$item->number}}</a></span><br>
+                     @endforeach
+                     <li style="margin-bottom: 0;">Hotline Miền Nam:</li>
+                     @foreach (json_decode($setting->phone3) as $item)
+                     <span style="padding-left: 40px;">{{$item->name}}: <a href="tel:{{$item->number}}">{{$item->number}}</a></span><br>
+                     @endforeach
                      <li>E-mail: {{$setting->email}}</li>
                      <li>Website: <a href="https://sanxuatgangduc.com.vn/" target="_blank" rel="noopener noreferrer">www.sanxuatgangduc.com.vn</a> </li>
                      <li>Website: <a href="https://sanxuatgangduc.com/" target="_blank" rel="noopener noreferrer">www.sanxuatgangduc.com</a> </li>

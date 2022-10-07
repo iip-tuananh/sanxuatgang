@@ -51,7 +51,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label>Số hotline</label>
+                  <label>Số hotline chính hoặc VPGD</label>
                   <vs-input
                     type="text"
                     size="default"
@@ -60,21 +60,96 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label>Số điện thoại 1</label>
-                  <vs-input
+                  <label>Số hotline miền bắc</label>
+                  <!-- <vs-input
                     type="text"
                     size="default"
                     class="w-100"
                     v-model="objData.phone2"
-                  />
+                  /> -->
+                  <div v-for="(item, index) in objData.phone2" :key="index">
+                  <div class="row">
+                    <div class="col-4">
+                      <vs-input
+                        type="text"
+                        size="default"
+                        :placeholder="'Tên ' + index"
+                        class="w-100"
+                        v-model="objData.phone2[index].name"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <vs-input
+                        type="text"
+                        size="default"
+                        :placeholder="'Số điện thoại ' + index"
+                        class="w-100"
+                        v-model="objData.phone2[index].number"
+                      />
+                    </div>
+                    <div class="col-2">
+                      <a
+                        href="javascript:;"
+                        v-if="index != 0"
+                        @click="remoteAr(index,'phone2')"
+                      >
+                        <img v-bind:src="'/media/' + joke.avatar" width="25" />
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+                  <el-button size="small" @click="addInput('phone2')"
+                  >Thêm số</el-button>
                 </div>
                 <div class="form-group">
-                  <label>Số điện thoại 2</label>
-                  <vs-input
+                  <label>Số hotline miền nam</label>
+                  <!-- <vs-input
                     type="text"
                     size="default"
                     class="w-100"
                     v-model="objData.phone3"
+                  /> -->
+                  <div v-for="(item, index) in objData.phone3" :key="index">
+                  <div class="row">
+                    <div class="col-4">
+                      <vs-input
+                        type="text"
+                        size="default"
+                        :placeholder="'Tên ' + index"
+                        class="w-100"
+                        v-model="objData.phone3[index].name"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <vs-input
+                        type="text"
+                        size="default"
+                        :placeholder="'Số điện thoại ' + index"
+                        class="w-100"
+                        v-model="objData.phone3[index].number"
+                      />
+                    </div>
+                    <div class="col-2">
+                      <a
+                        href="javascript:;"
+                        v-if="index != 0"
+                        @click="remoteAr(index,'phone3')"
+                      >
+                        <img v-bind:src="'/media/' + joke.avatar" width="25" />
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+                  <el-button size="small" @click="addInput('phone3')"
+                  >Thêm số</el-button>
+                </div>
+                <div class="form-group">
+                  <label>Zalo Number</label>
+                  <vs-input
+                    type="text"
+                    size="default"
+                    class="w-100"
+                    v-model="objData.zalo_number"
                   />
                 </div>
                 <div class="form-group">
@@ -187,6 +262,9 @@ export default {
   name: "setting",
   data() {
     return {
+      joke: {
+        avatar: "delete-sign--v2.png",
+      },
       objData:
         {
             webname : "",
@@ -195,8 +273,15 @@ export default {
             address2 : "",
             address3 : "",
             phone1 : "",
-            phone2 : "",
-            phone3 : "",
+            zalo_number : "",
+            phone2 : [{
+              name: '',
+              number: ''
+            }],
+            phone3 : [{
+              name: '',
+              number: ''
+            }],
             fax : "",
             email : "",
             facebook : "",
@@ -234,11 +319,35 @@ export default {
       this.loadings(true);
       this.getSetting().then(response => {
         this.loadings(false);
-        this.objData = response.data
+        this.objData = response.data;
+        this.objData.phone2 = JSON.parse(response.data.phone2);
+        this.objData.phone3 = JSON.parse(response.data.phone3);
       }).catch(error => {
         this.loadings(false);;
       })
-    }
+    },
+    remoteAr(index,key) {
+      if(key == 'phone2'){
+        this.objData.phone2.splice(index, 1);
+      }
+      if(key == 'phone3'){
+        this.objData.phone3.splice(index, 1);
+      }
+        
+    },
+    addInput(key) {
+        var oj = {};
+        if(key =='phone2'){
+          oj.name = "";
+          oj.number = "";
+          this.objData.phone2.push(oj);
+        }
+        if(key =='phone3'){
+          oj.name = "";
+          oj.number = "";
+          this.objData.phone3.push(oj);
+        }
+    },
   },
   mounted() {
     this.listSettings();

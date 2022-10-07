@@ -24,33 +24,39 @@
                               }
                               </style>
                         </div>
-                        <div style="display: inline-flex; margin-bottom: 15px;">
-                              <a href="tel:0977244959">
-                                    <img src="{{url('frontend/images/ho-tro-truc-tuyen-call.png')}}" alt="" loading="lazy">
-                              </a>
-                              <div style="margin: 5px 0 0 15px;">
-                                    <p style="margin: 0;">Ms Đông</p>
-                                    <a href="tel:0977244959">0977.244.959</a>
+                        <div class="hotline-title">Miền Bắc</div>
+                        @foreach (json_decode($setting->phone2) as $item)
+                              <div style="display: inline-flex; margin-bottom: 15px;">
+                                    <a href="tel:{{$item->number}}">
+                                          <img src="{{url('frontend/images/ho-tro-truc-tuyen-call.png')}}" alt="" loading="lazy">
+                                    </a>
+                                    <div style="margin: 5px 0 0 15px;">
+                                          <p style="margin: 0;">{{$item->name}}</p>
+                                          <a href="tel:{{$item->number}}">{{$item->number}}</a>
+                                    </div>
                               </div>
-                        </div>
-                        <div style="display: inline-flex; margin-bottom: 15px;">
-                              <a href="tel:0983767899">
-                                    <img src="{{url('frontend/images/ho-tro-truc-tuyen-call.png')}}" alt="" loading="lazy">
-                              </a>
-                              <div style="margin: 5px 0 0 15px;">
-                                    <p style="margin: 0;">Mr Minh</p>
-                                    <a href="tel:0983767899">0983.76.78.99</a>
+                        @endforeach
+                        <div class="hotline-title">Miền Nam</div>
+                        @foreach (json_decode($setting->phone3) as $item)
+                              <div style="display: inline-flex; margin-bottom: 15px;">
+                                    <a href="tel:{{$item->number}}">
+                                          <img src="{{url('frontend/images/ho-tro-truc-tuyen-call.png')}}" alt="" loading="lazy">
+                                    </a>
+                                    <div style="margin: 5px 0 0 15px;">
+                                          <p style="margin: 0;">{{$item->name}}</p>
+                                          <a href="tel:{{$item->number}}">{{$item->number}}</a>
+                                    </div>
                               </div>
-                        </div>
-                        <div style="display: inline-flex; margin-bottom: 15px;">
+                        @endforeach
+                        {{-- <div style="display: inline-flex; margin-bottom: 15px;">
                               <a href="tel:02462602268">
                                     <img src="{{url('frontend/images/icon_hotline.png')}}" alt="" loading="lazy">
                               </a>
                               <div style="margin: 5px 0 0 15px;">
                                     <p style="margin: 0;">VPGD</p>
-                                    <a href="tel:02462602268">024.6260.2268</a>
+                                    <a href="tel:{{$setting->phone1}}">{{$setting->phone1}}</a>
                               </div>
-                        </div>
+                        </div> --}}
                         <p><span>Email: </span><a href="mailto:{{$setting->email}}">{{$setting->email}}</a></p>
                         <p><span>Website: </span><a href="https://sanxuatgangduc.com/">sanxuatgangduc.com</a></p>
                         <p><span>Website: </span><a href="https://sanxuatgangduc.com.vn/">sanxuatgangduc.com.vn</a></p>
@@ -200,5 +206,11 @@
 <style>
 #col-439034941 > .col-inner {
 margin: -19px 0px 0px 0px;
+}
+.hotline-title {
+      font-size: 21px;
+      text-transform: uppercase;
+      color: #005099;
+      font-weight: 600;
 }
 </style>

@@ -47,8 +47,15 @@ Liên hệ với chúng tôi
 						{{-- <li><strong>Số TK:</strong> 0021000337035</li>
 						<li><strong>Ngân hàng:</strong> Vietcombank &#8211; CN Hà Nội, Phòng giao dịch số 5</li> --}}
 						<li><strong>Website:</strong> www.sanxuatgangduc.com</li>
-						<li><strong>Hotline:</strong> {{$setting->phone1}}</li>
-						<li><strong>Điện thoại (Tel):</strong> {{$setting->phone2}} – {{$setting->phone3}}</li>
+						<li><strong>Hotline VPGD:</strong> {{$setting->phone1}}</li>
+						<li style="margin-bottom: 0;"><strong>Hotline Miền Bắc:</strong></li>
+						@foreach (json_decode($setting->phone2) as $item)
+						<span style="padding-left: 40px;">{{$item->name}}: <a href="tel:{{$item->number}}">{{$item->number}}</a></span><br>
+						@endforeach
+						<li style="margin-bottom: 0;"><strong>Hotline Miền Nam:</strong></li>
+						@foreach (json_decode($setting->phone3) as $item)
+						<span style="padding-left: 40px;">{{$item->name}}: <a href="tel:{{$item->number}}">{{$item->number}}</a></span><br>
+						@endforeach
 						<li><strong>Email:</strong> {{$setting->email}}</li>
 					</ul>
 				</div>

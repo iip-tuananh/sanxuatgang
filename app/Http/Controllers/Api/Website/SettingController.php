@@ -29,8 +29,9 @@ class SettingController extends Controller
 	    	$setting->address2 = $request->address2;
 	    	$setting->address3 = $request->address3;
 	    	$setting->phone1 = $request->phone1;
-	    	$setting->phone2 = $request->phone2;
-	    	$setting->phone3 = $request->phone3;
+	    	$setting->zalo_number = $request->zalo_number;
+	    	$setting->phone2 = json_encode($request->phone2);
+	    	$setting->phone3 = json_encode($request->phone3);
 	    	$setting->fax = $request->fax;
             $setting->email  = $request->email;
 	    	$setting->facebook = $request->facebook;
@@ -54,8 +55,9 @@ class SettingController extends Controller
 	    	$setting->address2 = $request->address2;
 	    	$setting->address3 = $request->address3;
 	    	$setting->phone1 = $request->phone1;
-	    	$setting->phone2 = $request->phone2;
-	    	$setting->phone3 = $request->phone3;
+	    	$setting->zalo_number = $request->zalo_number;
+	    	$setting->phone2 = json_encode($request->phone2);
+	    	$setting->phone3 = json_encode($request->phone3);
 	    	$setting->fax = $request->fax;
             $setting->email  = $request->email;
 	    	$setting->facebook = $request->facebook;
