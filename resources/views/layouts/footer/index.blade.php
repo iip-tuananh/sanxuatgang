@@ -194,7 +194,7 @@
       <div class="container clearfix">
          <div class="footer-primary pull-left">
          <div class="copyright-footer">
-               Copyright 2022 © {{$setting->company}} | Design By <a href="#" target="_blank">SBT</a>     
+               Copyright 2022 © {{$setting->company}}     
          </div>
          </div>
       </div>
