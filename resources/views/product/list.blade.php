@@ -45,6 +45,26 @@ Danh sách {{$title}}
             </div>
             <!-- row -->
          </div>
+         <div class="paginate">
+            {{$list->links()}}
+         </div>
+         @if (isset($cateno))
+         <div class="product-footer">
+            <div class="woocommerce-tabs wc-tabs-wrapper container tabbed-content">
+               <ul class="tabs wc-tabs product-tabs small-nav-collapse nav nav-uppercase nav-line nav-left" role="tablist">
+                  <li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
+                     <a href="#tab-description">
+                     Mô tả					</a>
+                  </li>
+               </ul>
+               <div class="tab-panels">
+                  <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content active" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+                     {!!languageName($cateno->content)!!}
+                  </div>
+               </div>
+            </div>
+         </div>
+         @endif
          <!-- shop container -->		
       </div>
    </div>
