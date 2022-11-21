@@ -49,6 +49,7 @@ Danh sách {{$title}}
             {{$list->links()}}
          </div> --}}
          @if (isset($cateno))
+         @if ($cateno->content != null)
          <div class="product-footer">
             <div class="woocommerce-tabs wc-tabs-wrapper container tabbed-content">
                <ul class="tabs wc-tabs product-tabs small-nav-collapse nav nav-uppercase nav-line nav-left" role="tablist">
@@ -64,6 +65,7 @@ Danh sách {{$title}}
                </div>
             </div>
          </div>
+         @endif
          @endif
          <!-- shop container -->		
       </div>
