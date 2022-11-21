@@ -16,8 +16,7 @@ class ProductController extends Controller
 {
     public function allProduct()
     {
-        $data['list'] = Product::where(['status'=>1])->orderBy('id','DESC')->select('id','category','name','discount','price','images','slug','cate_slug','type_slug')
-        ->paginate(32);
+        $data['list'] = Product::where(['status'=>1])->orderBy('id','DESC')->select('id','category','name','discount','price','images','slug','cate_slug','type_slug');
         $data['title'] = "Tất cả sản phẩm";
         return view('product.list',$data);
     }
@@ -26,8 +25,7 @@ class ProductController extends Controller
     {
         $data['list'] = Product::where(['status'=>1,'cate_slug'=>$danhmuc])
         ->orderBy('id','DESC')
-        ->select('id','category','name','discount','price','images','slug','cate_slug','type_slug','description')
-        ->paginate(24);
+        ->select('id','category','name','discount','price','images','slug','cate_slug','type_slug','description');
         $data['cateno'] = Category::where('slug',$danhmuc)->first(['id','name','avatar','content','slug']);
         $cate_id = $data['cateno']->id;
         $data['cateid'] = $cate_id;
@@ -38,8 +36,7 @@ class ProductController extends Controller
     public function allListType($cate,$type){
         $data['list'] = Product::where(['status'=>1, 'cate_slug'=>$cate,'type_slug'=>$type])
         ->orderBy('id','DESC')
-        ->select('id','category','name','discount','price','images','slug','cate_slug','type_slug','description')
-        ->paginate(24);
+        ->select('id','category','name','discount','price','images','slug','cate_slug','type_slug','description');
         $data['pronew'] = Product::where('status',1)->orderBy('id','DESC')->select('id','category','name','discount','price','images','slug','cate_slug','type_slug')
         ->paginate(5);
         $data['cateno'] = TypeProduct::where(['slug'=>$type, 'cate_slug'=>$cate])->first(['id','name','cate_id','content', 'avatar']);
@@ -52,8 +49,7 @@ class ProductController extends Controller
     public function allListTypeTwo($danhmuc,$loaidanhmuc,$thuonghieu){
         $data['list'] = Product::where(['status'=>1,'cate_slug'=>$danhmuc,'type_slug'=>$loaidanhmuc,'type_two_slug'=>$thuonghieu])
             ->orderBy('id','DESC')
-            ->select('id','category','name','discount','price','images','slug','cate_slug','type_slug','description')
-            ->paginate(24);
+            ->select('id','category','name','discount','price','images','slug','cate_slug','type_slug','description');
         $data['type'] = TypeProductTwo::where('slug',$thuonghieu)->first(['id','name','cate_id','content']);
         $cate_id = $data['type']->cate_id;
         $data['typeCate'] = TypeProduct::where([

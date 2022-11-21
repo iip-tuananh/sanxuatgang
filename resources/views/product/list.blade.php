@@ -45,9 +45,9 @@ Danh sách {{$title}}
             </div>
             <!-- row -->
          </div>
-         <div class="paginate">
+         {{-- <div class="paginate">
             {{$list->links()}}
-         </div>
+         </div> --}}
          @if (isset($cateno))
          <div class="product-footer">
             <div class="woocommerce-tabs wc-tabs-wrapper container tabbed-content">
