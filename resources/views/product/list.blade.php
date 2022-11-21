@@ -59,7 +59,7 @@ Danh sách {{$title}}
                </ul>
                <div class="tab-panels">
                   <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content active" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-                     {!!languageName($cateno->content)!!}
+                     {!!($cateno->content)!!}
                   </div>
                </div>
             </div>
