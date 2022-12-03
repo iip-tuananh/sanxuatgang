@@ -269,7 +269,7 @@
             <div id="col-1134690975" class="col small-12 large-12"  >
                   <div class="col-inner"  >
                   <div class="container section-title-container" style="margin-bottom:-5px;">
-                  <h2 class="section-title section-title-center"><b></b><span class="section-title-main" >ĐỐI TÁC CỦA CHÚNG TÔI</span><b></b></h2>
+                  <h2 class="section-title section-title-center"><b></b><span class="section-title-main" >TRUYỀN THÔNG NÓI VỀ T&T</span><b></b></h2>
                   </div>
                   <div class="slider-wrapper relative" id="slider-5863197" >
                   <div class="slider slider-nav-circle slider-nav-normal slider-nav-light slider-style-normal"
@@ -286,7 +286,7 @@
                               "adaptiveHeight" : true,
                               "dragThreshold" : 10,
                               "percentPosition": true,
-                              "pageDots": true,
+                              "pageDots": false,
                               "rightToLeft": false,
                               "draggable": true,
                               "selectedAttraction": 0.1,
@@ -294,8 +294,8 @@
                               "friction": 0.6        }'
                         >
                         @foreach ($partners as $key=>$partner)
-                              <div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 130px!important;">
-                                    <div class="ux-logo-link block image-" title=""  href="{{$partner->link}}" style="padding: 15px;"><img src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="{{$partner->image}}" title="" alt="" class="lazy-load ux-logo-image block" style="height:100px;" loading="lazy" /></div>
+                              <div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: 200px!important;">
+                                    <a class="ux-logo-link block image-" title=""  href="{{$partner->link}}" style="padding: 15px;"><img src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E" data-src="{{$partner->image}}" title="" alt="" class="lazy-load ux-logo-image block" style="height:100px;" loading="lazy" /></a>
                               </div>
                         @endforeach
                   </div>
