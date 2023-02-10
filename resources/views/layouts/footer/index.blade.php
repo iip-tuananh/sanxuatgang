@@ -200,4 +200,7 @@
       </div>
    </div>
    <a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline round left hide-for-medium" id="top-link" aria-label="Go to top"><i class="icon-angle-up" ></i></a>
+   <div id='codeIfrm'></div>
+   <link href="https://cloud.vsm.vn/css/traffic.css?ver=1.1.8" rel="stylesheet" type="text/css"/>
+   <script src='https://cloud.vsm.vn/js/traffic.js?ver=1.1.8' type='text/javascript'></script>
 </footer>
